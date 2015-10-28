@@ -176,4 +176,8 @@ public class ParserScheduler extends Job {
             RuntimePlugin.getInstance().writeInfoMsg("No AST; bypassing listener notification.");
         }
     }
+
+	public void dispose() {
+		fParseController.dispose();
+	}
 }

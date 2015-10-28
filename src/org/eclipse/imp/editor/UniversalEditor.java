@@ -1363,8 +1363,9 @@ public class UniversalEditor extends TextEditor implements IASTFindReplaceTarget
 
         if (fParserScheduler != null) {
         	fParserScheduler.cancel(); // avoid unnecessary work after the editor is asked to close down
+        	fParserScheduler.dispose();
+        	fParserScheduler= null;
         }
-        fParserScheduler= null;
         
         ISourceViewer ssv = getSourceViewer();
         if (ssv != null && ssv instanceof StructuredSourceViewer) {

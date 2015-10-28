@@ -117,4 +117,9 @@ public interface IParseController extends ILanguageService {
      * language
      */
     IAnnotationTypeInfo getAnnotationTypeInfo();
+
+    /**
+     * Allows to free resources if the associated editor window gets closed
+     */
+    void dispose();
 }

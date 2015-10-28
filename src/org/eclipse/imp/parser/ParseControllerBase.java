@@ -94,4 +94,8 @@ public abstract class ParseControllerBase implements IParseController {
 	public IDocument getDocument() {
 	    return fDocument;
 	}
+
+	public void dispose() {
+		// Does nothing by default.
+	}
 }
